@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.3b0a7773be7cc648fd04521c72d766bd.js"
+  "/precache-manifest.8221d20a0c7a353d71f6fa8e13291ee8.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "infinity-quick-dice"});
