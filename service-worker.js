@@ -1,23 +1,4 @@
-/**
- * Welcome to your Workbox-powered service worker!
- *
- * You'll need to register this file in your web app and you should
- * disable HTTP caching for this file too.
- * See https://goo.gl/nhQhGp
- *
- * The rest of the code is auto-generated. Please don't update this file
- * directly; instead, make changes to your Workbox build configuration
- * and re-run your build process.
- * See https://goo.gl/2aRDsh
- */
-
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
-
-importScripts(
-  "/precache-manifest.be01c8b41add2de9282960d83032a610.js"
-);
-
-workbox.core.setCacheNameDetails({prefix: "infinity-quick-dice"});
+importScripts("/precache-manifest.bceb50a99a72343e56242e69bb5e7533.js", "https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
