@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "ba38d6c13200734f8673",
-    "url": "/css/app.05ff88b8.css"
+    "revision": "88c1a972e2f9dd8ffebb",
+    "url": "/css/app.ca3dbd86.css"
   },
   {
-    "revision": "ba38d6c13200734f8673",
-    "url": "/js/app.00224d4b.js"
+    "revision": "88c1a972e2f9dd8ffebb",
+    "url": "/js/app.faedb5c1.js"
   },
   {
     "revision": "979fccf9216ee5fa05e7",
@@ -20,11 +20,11 @@ self.__precacheManifest = [
     "url": "/fonts/Montalban.6a2d830d.otf"
   },
   {
-    "revision": "526aa371ae56e6ac21cef27ebd6e63f3",
+    "revision": "696b4a3ea336ffc3fca1e5a2cc48f76d",
     "url": "/index.html"
   },
   {
-    "revision": "5f243cd2e66770eaef31a3e011140e0a",
+    "revision": "c03f478947b61b4f2a7560ed17fbda82",
     "url": "/PersistRollsWorker.js"
   },
   {

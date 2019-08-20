@@ -1,14 +1,24 @@
 let db;
 
+function sendError(e) {
+  postMessage({state: 'error', details: e.message});
+}
+
 onmessage = function(event) {
   switch (event.data.action) {
     case 'init': {
       console.log('initializing worker db "' + event.data.dbName + '" with version ' + event.data.dbVersion);
-      let req = indexedDB.open(event.data.dbName, event.data.dbVersion);
-      req.onsuccess = function(e) {
-        db = req.result;
-        postMessage('ready');
-      };
+      if (indexedDB) {
+        let req = indexedDB.open(event.data.dbName, event.data.dbVersion);
+        req.onsuccess = function(e) {
+          db = req.result;
+          postMessage({state: 'ready'});
+        };
+        req.onerror = sendError;
+      } else {
+        console.warn('indexedDB is not available');
+        sendError(new Error('indexedDB is not available'));
+      }
       break;
     }
     case 'load': {
@@ -18,8 +28,9 @@ onmessage = function(event) {
       
       transaction.oncomplete = function(event) {
         console.log('transaction complete');
-        postMessage('loaded');
+        postMessage({state: 'loaded'});
       };
+      transaction.onerror = sendError;
       let store = transaction.objectStore(event.data.storeName);
       let clearRequest = store.clear();
       for (let key of Object.keys(rolls)) {
@@ -27,9 +38,9 @@ onmessage = function(event) {
           ...rolls[key],
         }, key);
       }
-      clearRequest.onsuccess = function(){
+      clearRequest.onsuccess = function() {
         console.log('cleared the db');
-        postMessage('cleared');
+        postMessage({state: 'cleared'});
       };
       break;
     }
