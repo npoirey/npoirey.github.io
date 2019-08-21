@@ -1,4 +1,4 @@
-importScripts("/precache-manifest.bd44fe03e44231cb074f07ab149953eb.js", "https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
+importScripts("/precache-manifest.52d20d08cca45a0ed2f0588eab9c2b4d.js", "https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
@@ -9,7 +9,8 @@ importScripts("/precache-manifest.bd44fe03e44231cb074f07ab149953eb.js", "https:/
 workbox.core.setCacheNameDetails({prefix: 'iqd'});
 
 // todo handle this automatically with travis, from package.json
-const LATEST_VERSION = '0.1.0'; // Change this value every time you want to deploy
+console.log('toto' + JSON.parse(unescape(process.env.PACKAGE_JSON || '%7Bversion%3A0%7D')).version);
+const LATEST_VERSION = '0.1.00'; // Change this value every time you want to deploy
 
 self.addEventListener('activate', (event) => {
   console.log(`%c ${LATEST_VERSION} `, 'background: #ddd; color: #0000ff');
