@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "b4bdd0ed77338f72247a",
+    "revision": "0f4c04b467d8a1a453fa",
     "url": "/css/app.b19b252d.css"
   },
   {
-    "revision": "b4bdd0ed77338f72247a",
-    "url": "/js/app.1da9358c.js"
+    "revision": "0f4c04b467d8a1a453fa",
+    "url": "/js/app.722260d1.js"
   },
   {
     "revision": "979fccf9216ee5fa05e7",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/fonts/Montalban.6a2d830d.otf"
   },
   {
-    "revision": "db27bda0a8125751d774c8a1e6d2085a",
+    "revision": "90ce3b44860e281fe8a8a16a8a1caac0",
     "url": "/index.html"
   },
   {
