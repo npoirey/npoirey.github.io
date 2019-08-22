@@ -1,4 +1,4 @@
-importScripts("/precache-manifest.c00aa4453cdf9679428552690dc9319e.js", "https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
+importScripts("/precache-manifest.2a647eacc3a8cae25acae20f52809bbb.js", "https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
@@ -6,11 +6,11 @@ importScripts("/precache-manifest.c00aa4453cdf9679428552690dc9319e.js", "https:/
  * See https://goo.gl/S9QRab
  */
 importScripts('./version.js'); // written by DumpVueEnvVarsWebpackPlugin
-console.debug(`Using version = ${iqdVersion}`);
+console.debug(`Using version = ${VUE_APP_VERSION}`);
 
 workbox.core.setCacheNameDetails({prefix: 'iqd'});
 
-const LATEST_VERSION = iqdVersion;
+const LATEST_VERSION = VUE_APP_VERSION;
 
 self.addEventListener('activate', (event) => {
   console.log(`%c ${LATEST_VERSION} `, 'background: #ddd; color: #0000ff');
